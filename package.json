@@ -3,12 +3,25 @@
 	"displayName": "PHP CS Fixer",
 	"description": "PHP CS Fixer extension for VS Code",
 	"version": "0.0.1",
-	"publisher": "Makao",
+	"publisher": "makao",
+    "author": {
+        "name": "Marcin Makalowski",
+        "url": "http://makao.pl"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/makao/vscode-phpcsfixer/issues"
+    },
+    "homepage": "https://github.com/makao/vscode-phpcsfixer/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/makao/vscode-phpcsfixer.git"
+    },
 	"engines": {
 		"vscode": "^0.10.6"
 	},
 	"categories": [
-		"Linters", "Languages", "Other"
+		"Linters", "Other"
 	],
 	"activationEvents": [
         "onLanguage:php"
