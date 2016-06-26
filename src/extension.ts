@@ -18,7 +18,7 @@ class PHPCSFixer {
     constructor() {
         let config = vscode.workspace.getConfiguration('phpcsfixer');
         this.save = config.get('onsave', false);
-        this.executable = config.get('executable', 'php-cs-fixer');
+        this.executable = config.get('executablePath', 'php-cs-fixer');
         this.useConfigFile = config.get('useConfigFile', false);
         this.configFileName = config.get('configFileName', '.php_cs');
         this.level = config.get('level', 'psr2');
