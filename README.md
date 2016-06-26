@@ -11,8 +11,7 @@ Open command palette <kbd>F1</kbd> and select `Extensions: Install Extension`, t
 ## Configuration
 ```JSON
 {
-    "phpcsfixer.phpPath": "php",
-    "phpcsfixer.phpCsFixerPath": "php-cs-fixer.phar",
+    "phpcsfixer.executable": "php-cs-fixer",
     "phpcsfixer.onsave": false,
     "phpcsfixer.useConfigFile": false,
     "phpcsfixer.configFileName": ".php_cs",
