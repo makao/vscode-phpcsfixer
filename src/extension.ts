@@ -7,8 +7,7 @@ import * as fs from 'fs'
 class PHPCSFixer {
 
     private save: boolean;
-    private phpPath: string;
-    private phpCsFixerPath: string;
+    private executable: string;
     private level: string;
     private fixers: string;
     private useConfigFile: boolean;
@@ -19,8 +18,7 @@ class PHPCSFixer {
     constructor() {
         let config = vscode.workspace.getConfiguration('phpcsfixer');
         this.save = config.get('onsave', false);
-        this.phpPath = config.get('phpPath', 'php');
-        this.phpCsFixerPath = config.get('phpCsFixerPath', 'php-cs-fixer.phar');
+        this.executable = config.get('executable', 'php-cs-fixer');
         this.useConfigFile = config.get('useConfigFile', false);
         this.configFileName = config.get('configFileName', '.php_cs');
         this.level = config.get('level', 'psr2');
@@ -53,7 +51,7 @@ class PHPCSFixer {
 
         let stdout = '';
         let args = this.getCommandArgs(document.fileName);
-        let exec = cp.spawn(this.phpPath, args);
+        let exec = cp.spawn(this.executable, args);
 
         exec.stdout.on('data', (buffer: Buffer) => {
             stdout += buffer.toString();
@@ -83,7 +81,7 @@ class PHPCSFixer {
     }
 
     getCommandArgs(fileName: string) {
-        let args = [this.phpCsFixerPath, 'fix', fileName];
+        let args = ['fix', fileName];
 
         if (this.useConfigFile) {
             let configFilePath = vscode.workspace.rootPath + '/' + this.configFileName;

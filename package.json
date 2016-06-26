@@ -36,14 +36,9 @@
             "title": "PHP CS Fixer Configuration options",
             "type": "object",
             "properties": {
-                "phpcsfixer.phpPath": {
+                "phpcsfixer.executable": {
                     "type": "string",
-                    "default": "php",
-                    "description": "Points to the php exectuable."
-                },
-                "phpcsfixer.phpCsFixerPath": {
-                    "type": "string",
-                    "default": "php-cs-fixer.phar",
+                    "default": "php-cs-fixer",
                     "description": "Points to the php-cs-fixer exectuable."
                 },
                 "phpcsfixer.onsave": {
@@ -64,7 +59,7 @@
                 "phpcsfixer.useConfigFile": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Check wether reading config file"
+                    "description": "Check wether use config file"
                 },
                 "phpcsfixer.configFileName": {
                     "type": "string",
