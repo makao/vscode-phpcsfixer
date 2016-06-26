@@ -36,12 +36,12 @@
             "title": "PHP CS Fixer Configuration options",
             "type": "object",
             "properties": {
-                "phpcsfixer.phppath": {
+                "phpcsfixer.phpPath": {
                     "type": "string",
                     "default": "php",
                     "description": "Points to the php exectuable."
                 },
-                "phpcsfixer.phpcsfixerpath": {
+                "phpcsfixer.phpCsFixerPath": {
                     "type": "string",
                     "default": "php-cs-fixer.phar",
                     "description": "Points to the php-cs-fixer exectuable."

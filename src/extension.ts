@@ -19,12 +19,12 @@ class PHPCSFixer {
     constructor() {
         let config = vscode.workspace.getConfiguration('phpcsfixer');
         this.save = config.get('onsave', false);
-        this.phpPath = config.get('phppath', 'php');
-        this.phpCsFixerPath = config.get('phpcsfixerpath', 'php-cs-fixer.phar');
+        this.phpPath = config.get('phpPath', 'php');
+        this.phpCsFixerPath = config.get('phpCsFixerPath', 'php-cs-fixer.phar');
+        this.useConfigFile = config.get('useConfigFile', false);
+        this.configFileName = config.get('configFileName', '.php_cs');
         this.level = config.get('level', 'psr2');
         this.fixers = config.get('fixers', '');
-        this.useConfigFile = config.get('useconfigfile', false);
-        this.configFileName = config.get('configfileName', '.php_cs');
     }
 
     dispose() {
