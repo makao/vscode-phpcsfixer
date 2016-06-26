@@ -36,7 +36,7 @@
             "title": "PHP CS Fixer Configuration options",
             "type": "object",
             "properties": {
-                "phpcsfixer.executable": {
+                "phpcsfixer.executablePath": {
                     "type": "string",
                     "default": "php-cs-fixer",
                     "description": "Points to the php-cs-fixer exectuable."
