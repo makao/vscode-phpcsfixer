@@ -1,9 +1,9 @@
 {
-	"name": "phpcsfixer",
-	"displayName": "PHP CS Fixer",
-	"description": "PHP CS Fixer extension for VS Code",
-	"version": "0.0.1",
-	"publisher": "makao",
+    "name": "phpcsfixer",
+    "displayName": "PHP CS Fixer",
+    "description": "PHP CS Fixer extension for VS Code",
+    "version": "0.0.1",
+    "publisher": "makao",
     "author": {
         "name": "Marcin Makalowski",
         "url": "http://makao.pl"
@@ -17,35 +17,35 @@
         "type": "git",
         "url": "https://github.com/makao/vscode-phpcsfixer.git"
     },
-	"engines": {
-		"vscode": "^0.10.6"
-	},
-	"categories": [
-		"Linters", "Other"
-	],
-	"activationEvents": [
+    "engines": {
+        "vscode": "^0.10.6"
+    },
+    "categories": [
+        "Linters", "Other"
+    ],
+    "activationEvents": [
         "onLanguage:php"
-	],
-	"main": "./out/src/extension",
+    ],
+    "main": "./out/src/extension",
     "contributes": {
         "commands": [{
-			"command": "phpcsfixer.fix",
-			"title": "PHP CS Fixer: fix this file"
-		}],
-		"configuration": {
-			"title": "PHP CS Fixer Configuration options",
-			"type": "object",
-			"properties": {
-				"phpcsfixer.executablePath": {
-					"type": "string",
-					"default": "php-cs-fixer",
-					"description": "Points to the php-cs-fixer exectuable."
-				},
+            "command": "phpcsfixer.fix",
+            "title": "PHP CS Fixer: fix this file"
+        }],
+        "configuration": {
+            "title": "PHP CS Fixer Configuration options",
+            "type": "object",
+            "properties": {
+                "phpcsfixer.executablePath": {
+                    "type": "string",
+                    "default": "php-cs-fixer",
+                    "description": "Points to the php-cs-fixer exectuable."
+                },
                 "phpcsfixer.onsave": {
-					"type": "boolean",
-					"default": false,
-					"description": "Execute PHP CS Fixer on save"
-				},
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Execute PHP CS Fixer on save"
+                },
                 "phpcsfixer.level": {
                     "type": "string",
                     "default": "psr2",
@@ -55,17 +55,27 @@
                     "type": "string",
                     "default": "",
                     "description": "List of fixers, @see: http://cs.sensiolabs.org/#usage"
+                },
+                "phpcsfixer.useConfigFile": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Check wether use config file"
+                },
+                "phpcsfixer.configFileName": {
+                    "type": "string",
+                    "default": ".php_cs",
+                    "description": "PHP CS Fixer config file used"
                 }
-			}
-		}
-	},
-	"scripts": {
-		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install"
-	},
-	"devDependencies": {
-		"typescript": "^1.7.5",
-		"vscode": "^0.11.0"
-	}
+    },
+    "devDependencies": {
+        "typescript": "^1.7.5",
+        "vscode": "^0.11.0"
+    }
 }

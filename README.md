@@ -13,6 +13,8 @@ Open command palette <kbd>F1</kbd> and select `Extensions: Install Extension`, t
 {
     "phpcsfixer.executablePath": "php-cs-fixer",
     "phpcsfixer.onsave": false,
+    "phpcsfixer.useConfigFile": false,
+    "phpcsfixer.configFileName": ".php_cs",
     "phpcsfixer.level": "psr2",
     "phpcsfixer.fixers": ""
 }
